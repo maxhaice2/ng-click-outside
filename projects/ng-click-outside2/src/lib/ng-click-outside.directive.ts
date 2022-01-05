@@ -15,7 +15,7 @@ import {
 import { isPlatformBrowser } from '@angular/common';
 
 @Directive({ selector: '[clickOutside]' })
-export class ClickOutsideDirective implements OnInit, OnChanges, OnDestroy {
+export class NgClickOutsideDirective implements OnInit, OnChanges, OnDestroy {
 
   @Input() clickOutsideEnabled: boolean = true;
 
@@ -137,7 +137,7 @@ export class ClickOutsideDirective implements OnInit, OnChanges, OnDestroy {
     this._ngZone.run(() => this.clickOutside.emit(ev));
   }
 
-  private _shouldExclude(target): boolean {
+  private _shouldExclude(target: any): boolean {
     for (let excludedNode of this._nodesExcluded) {
       if (excludedNode.contains(target)) {
         return true;
