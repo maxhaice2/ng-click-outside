@@ -2,6 +2,20 @@
 
 angular 13 version of https://www.npmjs.com/package/ng-click-outside If you still use Angular 12 or older please use the original package.
 
+
+Migration
+
+```
+// change imports
+import { ClickOutsideModule } from 'ng-click-outside';
+// to
+import {NgClickOutsideModule} from 'ng-click-outside2';
+
+// and in Module import
+ClickOutsideModule
+// to
+NgClickOutsideModule
+```
 ---
 
 
@@ -27,11 +41,11 @@ npm install --save ng-click-outside
 Add `ClickOutsideModule` to your list of module imports:
 
 ```typescript
-import { ClickOutsideModule } from 'ng-click-outside';
+import {NgClickOutsideModule} from 'ng-click-outside2';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, ClickOutsideModule],
+  imports: [BrowserModule, NgClickOutsideModule],
   bootstrap: [AppComponent]
 })
 class AppModule {}
