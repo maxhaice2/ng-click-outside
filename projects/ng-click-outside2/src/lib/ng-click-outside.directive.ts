@@ -4,29 +4,29 @@ import {
   EventEmitter,
   Inject,
   Input,
+  NgZone,
   OnChanges,
   OnDestroy,
   OnInit,
   Output,
   PLATFORM_ID,
   SimpleChanges,
-  NgZone,
 } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import {isPlatformBrowser} from '@angular/common';
 
-@Directive({ selector: '[clickOutside]' })
+@Directive({selector: '[clickOutside]'})
 export class NgClickOutsideDirective implements OnInit, OnChanges, OnDestroy {
 
-  @Input() clickOutsideEnabled: boolean = true;
+  @Input() clickOutsideEnabled = true;
 
-  @Input() attachOutsideOnClick: boolean = false;
-  @Input() delayClickOutsideInit: boolean = false;
-  @Input() emitOnBlur: boolean = false;
+  @Input() attachOutsideOnClick = false;
+  @Input() delayClickOutsideInit = false;
+  @Input() emitOnBlur = false;
 
-  @Input() exclude: string = '';
-  @Input() excludeBeforeClick: boolean = false;
+  @Input() exclude = '';
+  @Input() excludeBeforeClick = false;
 
-  @Input() clickOutsideEvents: string = '';
+  @Input() clickOutsideEvents = '';
 
   @Output() clickOutside: EventEmitter<Event> = new EventEmitter<Event>();
 
@@ -34,22 +34,26 @@ export class NgClickOutsideDirective implements OnInit, OnChanges, OnDestroy {
   private _events: Array<string> = ['click'];
 
   constructor(
-      private _el: ElementRef,
-      private _ngZone: NgZone,
-      @Inject(PLATFORM_ID) private platformId: Object) {
+    private _el: ElementRef,
+    private _ngZone: NgZone,
+    @Inject(PLATFORM_ID) private platformId: Object) {
     this._initOnClickBody = this._initOnClickBody.bind(this);
     this._onClickBody = this._onClickBody.bind(this);
     this._onWindowBlur = this._onWindowBlur.bind(this);
   }
 
   ngOnInit() {
-    if (!isPlatformBrowser(this.platformId)) { return; }
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
 
     this._init();
   }
 
   ngOnDestroy() {
-    if (!isPlatformBrowser(this.platformId)) { return; }
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
 
     this._removeClickOutsideListener();
     this._removeAttachOutsideOnClickListener();
@@ -57,7 +61,9 @@ export class NgClickOutsideDirective implements OnInit, OnChanges, OnDestroy {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (!isPlatformBrowser(this.platformId)) { return; }
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
 
     if (changes['attachOutsideOnClick'] || changes['exclude'] || changes['emitOnBlur']) {
       this._init();
@@ -104,7 +110,9 @@ export class NgClickOutsideDirective implements OnInit, OnChanges, OnDestroy {
   }
 
   private _onClickBody(ev: Event) {
-    if (!this.clickOutsideEnabled) { return; }
+    if (!this.clickOutsideEnabled) {
+      return;
+    }
 
     if (this.excludeBeforeClick) {
       this._excludeCheck();
@@ -132,7 +140,9 @@ export class NgClickOutsideDirective implements OnInit, OnChanges, OnDestroy {
   }
 
   private _emit(ev: Event) {
-    if (!this.clickOutsideEnabled) { return; }
+    if (!this.clickOutsideEnabled) {
+      return;
+    }
 
     this._ngZone.run(() => this.clickOutside.emit(ev));
   }
