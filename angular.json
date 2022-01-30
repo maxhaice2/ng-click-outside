@@ -31,6 +31,15 @@
             "tsConfig": "projects/ng-click-outside2/tsconfig.spec.json",
             "karmaConfig": "projects/ng-click-outside2/karma.conf.js"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ng-click-outside2/**/*.ts",
+              "projects/ng-click-outside2/**/*.html"
+            ]
+          }
         }
       }
     },
@@ -133,6 +142,15 @@
               "projects/demo/src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/demo/**/*.ts",
+              "projects/demo/**/*.html"
+            ]
           }
         }
       }
