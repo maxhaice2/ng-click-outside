@@ -12,7 +12,7 @@ import {
   PLATFORM_ID,
   SimpleChanges,
 } from '@angular/core';
-import {isPlatformBrowser} from '@angular/common';
+import {DOCUMENT, isPlatformBrowser} from '@angular/common';
 
 @Directive({selector: '[clickOutside]'})
 export class NgClickOutsideDirective implements OnInit, OnChanges, OnDestroy {
@@ -36,6 +36,7 @@ export class NgClickOutsideDirective implements OnInit, OnChanges, OnDestroy {
   constructor(
     private _el: ElementRef,
     private _ngZone: NgZone,
+    @Inject(DOCUMENT) private document: Document,
     @Inject(PLATFORM_ID) private platformId: Object) {
     this._initOnClickBody = this._initOnClickBody.bind(this);
     this._onClickBody = this._onClickBody.bind(this);
@@ -99,7 +100,7 @@ export class NgClickOutsideDirective implements OnInit, OnChanges, OnDestroy {
   private _excludeCheck() {
     if (this.exclude) {
       try {
-        const nodes = Array.from(document.querySelectorAll(this.exclude)) as Array<HTMLElement>;
+        const nodes = Array.from(this.document.querySelectorAll(this.exclude)) as Array<HTMLElement>;
         if (nodes) {
           this._nodesExcluded = nodes;
         }
@@ -133,7 +134,7 @@ export class NgClickOutsideDirective implements OnInit, OnChanges, OnDestroy {
    */
   private _onWindowBlur(ev: Event) {
     setTimeout(() => {
-      if (!document.hidden) {
+      if (!this.document.hidden) {
         this._emit(ev);
       }
     });
@@ -159,13 +160,13 @@ export class NgClickOutsideDirective implements OnInit, OnChanges, OnDestroy {
 
   private _initClickOutsideListener() {
     this._ngZone.runOutsideAngular(() => {
-      this._events.forEach(e => document.addEventListener(e, this._onClickBody));
+      this._events.forEach(e => this.document.addEventListener(e, this._onClickBody));
     });
   }
 
   private _removeClickOutsideListener() {
     this._ngZone.runOutsideAngular(() => {
-      this._events.forEach(e => document.removeEventListener(e, this._onClickBody));
+      this._events.forEach(e => this.document.removeEventListener(e, this._onClickBody));
     });
   }
 
