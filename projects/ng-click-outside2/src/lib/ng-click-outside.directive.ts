@@ -9,10 +9,9 @@ import {
   OnDestroy,
   OnInit,
   Output,
-  PLATFORM_ID,
   SimpleChanges,
 } from '@angular/core';
-import {DOCUMENT, isPlatformBrowser} from '@angular/common';
+import {DOCUMENT} from '@angular/common';
 
 @Directive({selector: '[clickOutside]'})
 export class NgClickOutsideDirective implements OnInit, OnChanges, OnDestroy {
@@ -36,36 +35,23 @@ export class NgClickOutsideDirective implements OnInit, OnChanges, OnDestroy {
   constructor(
     private _el: ElementRef,
     private _ngZone: NgZone,
-    @Inject(DOCUMENT) private document: Document,
-    @Inject(PLATFORM_ID) private platformId: Object) {
+    @Inject(DOCUMENT) private document: Document) {
     this._initOnClickBody = this._initOnClickBody.bind(this);
     this._onClickBody = this._onClickBody.bind(this);
     this._onWindowBlur = this._onWindowBlur.bind(this);
   }
 
   ngOnInit() {
-    if (!isPlatformBrowser(this.platformId)) {
-      return;
-    }
-
     this._init();
   }
 
   ngOnDestroy() {
-    if (!isPlatformBrowser(this.platformId)) {
-      return;
-    }
-
     this._removeClickOutsideListener();
     this._removeAttachOutsideOnClickListener();
     this._removeWindowBlurListener();
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (!isPlatformBrowser(this.platformId)) {
-      return;
-    }
-
     if (changes['attachOutsideOnClick'] || changes['exclude'] || changes['emitOnBlur']) {
       this._init();
     }
