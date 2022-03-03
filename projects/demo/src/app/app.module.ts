@@ -9,7 +9,7 @@ import {NgClickOutsideModule} from 'ng-click-outside2';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     NgClickOutsideModule
   ],
   providers: [],
