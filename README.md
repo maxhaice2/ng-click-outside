@@ -1,26 +1,10 @@
 # ng-click-outside2
 
-angular 13 version of https://www.npmjs.com/package/ng-click-outside If you still use Angular 12 or older please use the original package.
 
+[![NPM](https://img.shields.io/npm/v/ng-click-outside2?color=orange&style=flat-square)](https://www.npmjs.com/package/ng-click-outside2)
+[![License](https://img.shields.io/github/license/Kr0san89/ng-click-outside?color=blue&style=flat-square)](https://github.com/Kr0san89/ng-click-outside/blob/master/LICENSE)
 
-Migration
-
-```
-// change imports
-import { ClickOutsideModule } from 'ng-click-outside';
-// to
-import {NgClickOutsideModule} from 'ng-click-outside2';
-
-// and in Module import
-ClickOutsideModule
-// to
-NgClickOutsideModule
-```
----
-
-
-Angular directive for handling click events outside an element. Useful for things like reacting to clicking
-outside of a dropdown menu or modal dialog.
+Angular directive for handling click events outside an element.
 
 Like binding to a regular `click` event in a template, you can do something like this:
 
@@ -28,13 +12,23 @@ Like binding to a regular `click` event in a template, you can do something like
 <div (clickOutside)="onClickedOutside($event)">My element</div>
 ```
 
+## Table of contents
+1. [Installation](#installation)
+2. [Compatibility](#compatibility)
+3. [Usage](#usage)
+4. [Migration from ng-click-outside](#migration-from-ng-click-outside)
 
 ## Installation
 
 ```shell
-npm install --save ng-click-outside
+npm install --save ng-click-outside2
 ```
 
+## Compatibility
+| Angular | Version | NPM |
+| --- |---------|---| 
+| 13  | 10.x.x  | `ng-click-outside2@^10.0.0` |
+If you still use Angular <= 12 please use the original package. https://www.npmjs.com/package/ng-click-outside
 
 ## Usage
 
@@ -78,3 +72,18 @@ export class AppComponent {
 | `emitOnBlur` | boolean | `false` | If enabled, emits an event when user clicks outside of applications' window while it's visible. Especially useful if page contains iframes. |
 | `exclude` | string | | A comma-separated string of DOM element queries to exclude when clicking outside of the element. For example: `[exclude]="'button,.btn-primary'"`. |
 | `excludeBeforeClick` | boolean | `false` | By default, `clickOutside` registers excluded DOM elements on init. This property refreshes the list before the `clickOutside` event is triggered. This is useful for ensuring that excluded elements added to the DOM after init are excluded (e.g. ng2-bootstrap popover: this allows for clicking inside the `.popover-content` area if specified in `exclude`). |
+
+## Migration from ng-click-outside
+
+```
+// change imports
+import { ClickOutsideModule } from 'ng-click-outside';
+// to
+import {NgClickOutsideModule} from 'ng-click-outside2';
+
+// and in Module import
+ClickOutsideModule
+// to
+NgClickOutsideModule
+```
+---
