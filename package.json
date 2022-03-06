@@ -7,7 +7,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:lib": "ng build ng-click-outside2",
+    "build:lib": "ng build ng-click-outside2 && cp README.md dist/ng-click-outside2",
     "publish:lib": "cd dist/ng-click-outside2 && npm publish",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",

@@ -28,6 +28,7 @@ npm install --save ng-click-outside2
 | Angular | Version | NPM |
 | --- |---------|---| 
 | 13  | 10.x.x  | `ng-click-outside2@^10.0.0` |
+
 If you still use Angular <= 12 please use the original package. https://www.npmjs.com/package/ng-click-outside
 
 ## Usage
