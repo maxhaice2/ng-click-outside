@@ -215,5 +215,7 @@
       }
     }
   },
-  "defaultProject": "ng-click-outside2"
+  "cli": {
+    "analytics": false
+  }
 }
