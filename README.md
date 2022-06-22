@@ -37,11 +37,11 @@ If you still use Angular <= 12 please use the original package. https://www.npmj
 Add `ClickOutsideModule` to your list of module imports:
 
 ```typescript
-import {NgClickOutsideModule} from 'ng-click-outside2';
+import {NgClickOutsideDirective} from 'ng-click-outside2';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, NgClickOutsideModule],
+  imports: [BrowserModule, NgClickOutsideDirective],
   bootstrap: [AppComponent]
 })
 class AppModule {}
@@ -81,11 +81,11 @@ export class AppComponent {
 // change imports
 import { ClickOutsideModule } from 'ng-click-outside';
 // to
-import {NgClickOutsideModule} from 'ng-click-outside2';
+import {NgClickOutsideDirective} from 'ng-click-outside2';
 
 // and in Module import
 ClickOutsideModule
 // to
-NgClickOutsideModule
+NgClickOutsideDirective
 ```
 ---
