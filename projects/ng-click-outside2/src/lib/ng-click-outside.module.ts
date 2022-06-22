@@ -1,13 +1,12 @@
 import {NgModule} from '@angular/core';
 import {NgClickOutsideDirective} from './ng-click-outside.directive';
 
-
-const exportDeclarations = [NgClickOutsideDirective];
-
+/**
+ * @deprecated use NgClickOutsideDirective directly as it is a Standalone Component, the Module will be removed in Version 12
+ */
 @NgModule({
-  declarations: exportDeclarations,
-  imports: [],
-  exports: exportDeclarations
+  imports: [NgClickOutsideDirective],
+  exports: [NgClickOutsideDirective]
 })
 export class NgClickOutsideModule {
 }

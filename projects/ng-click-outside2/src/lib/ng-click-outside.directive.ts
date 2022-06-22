@@ -13,7 +13,10 @@ import {
 } from '@angular/core';
 import {DOCUMENT} from '@angular/common';
 
-@Directive({selector: '[clickOutside]'})
+@Directive({
+  selector: '[clickOutside]',
+  standalone: true,
+})
 export class NgClickOutsideDirective implements OnInit, OnChanges, OnDestroy {
 
   @Input() clickOutsideEnabled = true;
