@@ -29,7 +29,7 @@ jobs:
       run: npm run lint
 
     - name: Test
-      run: npm run test
+      run: npm run test && coveralls < coverage/lcov.info
 
     - name: Build
       run: npm run build:lib

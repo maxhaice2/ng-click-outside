@@ -2,6 +2,7 @@
 
 
 [![NPM](https://img.shields.io/npm/v/ng-click-outside2?color=orange&style=flat-square)](https://www.npmjs.com/package/ng-click-outside2)
+[![Coverage Status](https://coveralls.io/repos/github/Kr0san89/ng-click-outside/badge.svg)](https://coveralls.io/github/Kr0san89/ng-click-outside)
 [![License](https://img.shields.io/github/license/Kr0san89/ng-click-outside?color=blue&style=flat-square)](https://github.com/Kr0san89/ng-click-outside/blob/master/LICENSE)
 [![Love Angular badge](https://img.shields.io/badge/angular-love-blue?logo=angular&angular=love)](https://www.github.com/angular/angular)
 
