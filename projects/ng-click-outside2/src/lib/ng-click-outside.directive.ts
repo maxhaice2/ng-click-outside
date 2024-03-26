@@ -72,7 +72,7 @@ export class NgClickOutsideDirective implements OnDestroy {
   }
 
   protected _init() {
-    this._initClickOutsideListener();
+    this._initOnClickBody();
   }
 
   protected _initOnClickBody() {
