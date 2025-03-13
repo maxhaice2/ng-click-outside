@@ -46,7 +46,7 @@ export class NgClickOutsideDirective implements OnDestroy {
    * ### For example, for additional mobile support:
    * `[clickOutsideEvents]="'click,touchstart'"`
    */
-  clickOutsideEvents = (['click'], {
+  clickOutsideEvents = input(['click'], {
     transform: arrayAttribute
   });
 
