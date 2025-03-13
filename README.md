@@ -31,8 +31,9 @@ npm install --save ng-click-outside3
 ## Compatibility
 | Angular  | Version | NPM                         |
 |----------|---------|-----------------------------|
-| 18,19    | 16.x.x  | `ng-click-outside3@^18.0.0` |
+| 18,19    | 18.x.x  | `ng-click-outside3@^18.0.0` |
 
+If you use Angular <= 18 and > 12 please use the original package. https://github.com/Kr0san89/ng-click-outside
 If you use Angular <= 12 please use the original package. https://www.npmjs.com/package/ng-click-outside
 
 ### Options
