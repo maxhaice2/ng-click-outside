@@ -1,6 +1,6 @@
 {
   "name": "ng-click-outside3",
-  "version": "1.0.0",
+  "version": "1.0.3alpha",
   "description": "Angular directive for handling click events outside an element.",
   "author": "Yevhenii Ostash",
   "contributors": "Eugene Cheung, Manuel Schmidt",
@@ -8,6 +8,9 @@
   "bugs": {
     "url": "https://github.com/maxhaice2/ng-click-outside3/issues"
   },
+  "main": "bundles/ng-click-outside3.js",
+  "module": "fesm2020/ng-click-outside3.mjs",
+  "types": "ng-click-outside3.d.ts",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

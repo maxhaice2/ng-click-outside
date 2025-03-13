@@ -13,9 +13,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kr0san89/ng-click-outside.git"
+    "url": "https://github.com/maxhaice2/ng-click-outside3.git"
   },
-  "author": "Eugene Cheung, Manuel Schmidt",
+  "author": "Yevhenii Ostash",
+  "contributors": ["Eugene Cheung", "Manuel Schmidt"],
   "peerDependencies": {
     "@angular/common": ">=19.0.0",
     "@angular/core": ">=19.0.0"

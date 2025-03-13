@@ -2,10 +2,10 @@
 
 
 [![NPM](https://img.shields.io/npm/v/ng-click-outside3?color=orange&style=flat-square)](https://www.npmjs.com/package/ng-click-outside3)
-[![License](https://img.shields.io/github/license/Kr0san89/ng-click-outside?color=blue&style=flat-square)](https://github.com/Kr0san89/ng-click-outside/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/maxhaice2/ng-click-outside3?color=blue&style=flat-square)](https://github.com/Kr0san89/ng-click-outside/blob/master/LICENSE)
 [![Love Angular badge](https://img.shields.io/badge/angular-love-blue?logo=angular&angular=love)](https://www.github.com/angular/angular)
-[![GitHub issues](https://img.shields.io/github/issues/Kr0san89/ng-click-outside.svg "GitHub issues")](https://github.com/Kr0san89/ng-click-outside)
-[![GitHub stars](https://img.shields.io/github/stars/Kr0san89/ng-click-outside.svg "GitHub stars")](https://github.com/Kr0san89/ng-click-outside)
+[![GitHub issues](https://img.shields.io/github/issues/maxhaice2/ng-click-outside.svg "GitHub issues")](https://github.com/Kr0san89/ng-click-outside)
+[![GitHub stars](https://img.shields.io/github/stars/maxhaice2/ng-click-outside.svg "GitHub stars")](https://github.com/Kr0san89/ng-click-outside)
 
 Angular directive for handling click events outside an element.
 
