@@ -51,6 +51,12 @@ export class NgClickOutsideDirective implements OnDestroy {
   });
 
   /**
+   * Enables or disables stopping event propagation on the element.
+   * Default: `true`.
+   */
+  stopPropagationEnabled = input(true, {transform: booleanAttribute});
+
+  /**
    * Outside Click Event
    */
   clickOutside = output<Event>();
@@ -63,15 +69,17 @@ export class NgClickOutsideDirective implements OnDestroy {
   constructor() {
     this._initOnClickBody = this._initOnClickBody.bind(this);
     this._onClickBody = this._onClickBody.bind(this);
-    afterNextRender(() => this._init())
+    afterNextRender(() => this._init());
   }
 
   ngOnDestroy() {
     this._removeClickOutsideListener();
+    this._removeElementListeners();
   }
 
   protected _init() {
     this._initOnClickBody();
+    this._initElementListeners();
   }
 
   protected _initOnClickBody() {
@@ -102,5 +110,29 @@ export class NgClickOutsideDirective implements OnDestroy {
     if (!this._el.nativeElement.contains(ev.target) && !this.excludeDirective?.isExclude(ev.target)) {
       this._emit(ev);
     }
+  }
+
+  protected _initElementListeners() {
+    this._ngZone.runOutsideAngular(() => {
+      if (this.stopPropagationEnabled) {
+        this.clickOutsideEvents().forEach(e =>
+          this._el.nativeElement.addEventListener(e, this._stopPropagation)
+        );
+      }
+    });
+  }
+
+  protected _removeElementListeners() {
+    this._ngZone.runOutsideAngular(() => {
+      if (this.stopPropagationEnabled) {
+        this.clickOutsideEvents().forEach(e =>
+          this._el.nativeElement.removeEventListener(e, this._stopPropagation)
+        );
+      }
+    });
+  }
+
+  private _stopPropagation(ev: Event) {
+    ev.stopPropagation();
   }
 }
