@@ -46,7 +46,7 @@ export class NgClickOutsideDirective implements OnDestroy {
    * ### For example, for additional mobile support:
    * `[clickOutsideEvents]="'click,touchstart'"`
    */
-  clickOutsideEvents = input(['click'], {
+  clickOutsideEvents = input<unknown, boolean>(['click'], {
     transform: arrayAttribute
   });
 
@@ -54,7 +54,7 @@ export class NgClickOutsideDirective implements OnDestroy {
    * Enables or disables stopping event propagation on the element.
    * Default: `false`.
    */
-  clickOutsideHostElementStopPropagationEnabled = input(false, {transform: booleanAttribute});
+  clickOutsideHostElementStopPropagationEnabled = input<(false, {transform: booleanAttribute});
 
   /**
    * Outside Click Event
