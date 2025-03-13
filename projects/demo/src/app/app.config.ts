@@ -5,7 +5,7 @@ import {
   NgClickOutsideDirective,
   NgClickOutsideEmitOnBlurDirective,
   NgClickOutsideExcludeDirective
-} from "ng-click-outside2";
+} from "ng-click-outside3";
 
 export const appConfig: ApplicationConfig = {
   providers: [

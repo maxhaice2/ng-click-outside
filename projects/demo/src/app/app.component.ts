@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgClickOutsideEmitOnBlurDirective, NgClickOutsideExcludeDirective, NgClickOutsideAttachOutsideDirective } from 'ng-click-outside2';
+import { NgClickOutsideEmitOnBlurDirective, NgClickOutsideExcludeDirective, NgClickOutsideAttachOutsideDirective } from 'ng-click-outside3';
 
 @Component({
     selector: 'app-root',

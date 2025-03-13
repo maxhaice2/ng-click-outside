@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'ng-click-outside2',
+  displayName: 'ng-click-outside3',
   preset: '../../jest.preset.js',
   roots: ['<rootDir>/src/'],
   setupFilesAfterEnv: ['<rootDir>/src/test.ts'],

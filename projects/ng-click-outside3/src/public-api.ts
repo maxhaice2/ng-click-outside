@@ -1,5 +1,5 @@
 /*
- * Public API Surface of ng-click-outside2
+ * Public API Surface of ng-click-outside3
  */
 
 export * from './lib/ng-click-outside.directive';

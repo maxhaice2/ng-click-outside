@@ -1,7 +1,7 @@
-# ng-click-outside2
+# ng-click-outside3
 
 
-[![NPM](https://img.shields.io/npm/v/ng-click-outside2?color=orange&style=flat-square)](https://www.npmjs.com/package/ng-click-outside2)
+[![NPM](https://img.shields.io/npm/v/ng-click-outside3?color=orange&style=flat-square)](https://www.npmjs.com/package/ng-click-outside3)
 [![License](https://img.shields.io/github/license/Kr0san89/ng-click-outside?color=blue&style=flat-square)](https://github.com/Kr0san89/ng-click-outside/blob/master/LICENSE)
 [![Love Angular badge](https://img.shields.io/badge/angular-love-blue?logo=angular&angular=love)](https://www.github.com/angular/angular)
 [![GitHub issues](https://img.shields.io/github/issues/Kr0san89/ng-click-outside.svg "GitHub issues")](https://github.com/Kr0san89/ng-click-outside)
@@ -25,20 +25,20 @@ Like binding to a regular `click` event in a template, you can do something like
 ## Installation
 
 ```shell
-npm install --save ng-click-outside2
+npm install --save ng-click-outside3
 ```
 
 ## Compatibility
 | Angular  | Version | NPM                         |
 |----------|---------|-----------------------------| 
-| 13       | 10.x.x  | `ng-click-outside2@^10.0.0` |
-| 14,15,16 | 11.x.x  | `ng-click-outside2@^11.0.0` |
-| 16,17    | 12.x.x  | `ng-click-outside2@^12.0.0` |
-| 17       | 13.x.x  | `ng-click-outside2@^13.0.0` |
-| 17       | 14.x.x  | `ng-click-outside2@^14.0.0` |
-| 17,18    | 15.x.x  | `ng-click-outside2@^15.0.0` |
-| 18,19    | 16.x.x  | `ng-click-outside2@^16.0.0` |
-| 19       | 17.x.x  | `ng-click-outside2@^17.0.0` |
+| 13       | 10.x.x  | `ng-click-outside3@^10.0.0` |
+| 14,15,16 | 11.x.x  | `ng-click-outside3@^11.0.0` |
+| 16,17    | 12.x.x  | `ng-click-outside3@^12.0.0` |
+| 17       | 13.x.x  | `ng-click-outside3@^13.0.0` |
+| 17       | 14.x.x  | `ng-click-outside3@^14.0.0` |
+| 17,18    | 15.x.x  | `ng-click-outside3@^15.0.0` |
+| 18,19    | 16.x.x  | `ng-click-outside3@^16.0.0` |
+| 19       | 17.x.x  | `ng-click-outside3@^17.0.0` |
 
 If you use Angular <= 12 please use the original package. https://www.npmjs.com/package/ng-click-outside
 
@@ -58,7 +58,7 @@ If you use Angular <= 12 please use the original package. https://www.npmjs.com/
 Add `NgClickOutsideDirective` to your imports:
 
 ```typescript
-import {NgClickOutsideDirective} from 'ng-click-outside2';
+import {NgClickOutsideDirective} from 'ng-click-outside3';
 
 @NgModule({
   declarations: [AppComponent],
@@ -86,7 +86,7 @@ export class AppComponent {
 
 ### Usage with Excluding classes
 ```typescript
-import {NgClickOutsideDirective} from 'ng-click-outside2';
+import {NgClickOutsideDirective} from 'ng-click-outside3';
 
 @NgModule({
   declarations: [AppComponent],
@@ -119,7 +119,7 @@ export class AppComponent {
 // change imports
 import { ClickOutsideModule } from 'ng-click-outside';
 // to
-import {NgClickOutsideDirective} from 'ng-click-outside2';
+import {NgClickOutsideDirective} from 'ng-click-outside3';
 
 // and in Module import
 ClickOutsideModule

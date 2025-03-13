@@ -24,6 +24,6 @@ jobs:
       run: npm run build:lib
 
     - name: Publish
-      run: cd dist/ng-click-outside2 && npm publish
+      run: cd dist/ng-click-outside3 && npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM }}

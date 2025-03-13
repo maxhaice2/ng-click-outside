@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ng-click-outside2": {
+    "ng-click-outside3": {
       "projectType": "library",
-      "root": "projects/ng-click-outside2",
-      "sourceRoot": "projects/ng-click-outside2/src",
+      "root": "projects/ng-click-outside3",
+      "sourceRoot": "projects/ng-click-outside3/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/ng-click-outside2/ng-package.json"
+            "project": "projects/ng-click-outside3/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ng-click-outside2/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ng-click-outside3/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ng-click-outside2/tsconfig.lib.json"
+              "tsConfig": "projects/ng-click-outside3/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,7 +27,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:jest",
           "options": {
-            "tsConfig": "projects/ng-click-outside2/tsconfig.spec.json",
+            "tsConfig": "projects/ng-click-outside3/tsconfig.spec.json",
             "polyfills": ["zone.js", "zone.js/testing"]
           }
         },
@@ -35,8 +35,8 @@
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": [
-              "projects/ng-click-outside2/**/*.ts",
-              "projects/ng-click-outside2/**/*.html"
+              "projects/ng-click-outside3/**/*.ts",
+              "projects/ng-click-outside3/**/*.html"
             ]
           }
         }

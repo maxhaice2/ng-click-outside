@@ -1,24 +1,25 @@
 {
-  "name": "ng-click-outside",
-  "version": "0.0.0",
+  "name": "ng-click-outside3",
+  "version": "1.0.0",
   "description": "Angular directive for handling click events outside an element.",
-  "author": "Eugene Cheung, Manuel Schmidt",
-  "homepage": "https://kr0san89.github.io/ng-click-outside/",
+  "author": "Yevhenii Ostash",
+  "contributors": "Eugene Cheung, Manuel Schmidt",
+  "homepage": "https://github.com/maxhaice2/ng-click-outside3",
   "bugs": {
-    "url": "https://github.com/Kr0san89/ng-click-outside/issues"
+    "url": "https://github.com/maxhaice2/ng-click-outside3/issues"
   },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build:demo": "ng build demo --base-href=/ng-click-outside/",
-    "build:lib": "ng build ng-click-outside2 && cp README.md dist/ng-click-outside2",
-    "publish:lib": "cd dist/ng-click-outside2 && npm publish",
-    "publish:next:lib": "cd dist/ng-click-outside2 && npm publish --tag alpha",
+    "build:demo": "ng build demo --base-href=/ng-click-outside3/",
+    "build:lib": "ng build ng-click-outside3 && cp README.md dist/ng-click-outside3",
+    "publish:lib": "cd dist/ng-click-outside3 && npm publish",
+    "publish:next:lib": "cd dist/ng-click-outside3 && npm publish --tag alpha",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint"
   },
-  "private": true,
+  "private": false,
   "license": "MIT",
   "dependencies": {
     "@angular/animations": "^19.1.5",

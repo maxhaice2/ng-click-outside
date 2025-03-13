@@ -12,9 +12,9 @@
     "sourceMap": true,
     "declaration": false,
     "paths": {
-      "ng-click-outside2": [
-        "dist/ng-click-outside2/ng-click-outside2",
-        "dist/ng-click-outside2"
+      "ng-click-outside3": [
+        "dist/ng-click-outside3/ng-click-outside3",
+        "dist/ng-click-outside3"
       ]
     },
     "experimentalDecorators": true,

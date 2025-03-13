@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/ng-click-outside2",
+  "dest": "../../dist/ng-click-outside3",
   "lib": {
     "entryFile": "src/public-api.ts"
   }

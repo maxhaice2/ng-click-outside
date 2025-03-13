@@ -10,8 +10,8 @@
       ],
       "parserOptions": {
         "project": [
-          "projects/ng-click-outside2/tsconfig.lib.json",
-          "projects/ng-click-outside2/tsconfig.spec.json"
+          "projects/ng-click-outside3/tsconfig.lib.json",
+          "projects/ng-click-outside3/tsconfig.spec.json"
         ],
         "createDefaultProgram": true
       },

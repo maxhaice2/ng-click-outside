@@ -37,7 +37,7 @@ export class NgClickOutsideExcludeDirective extends NgClickOutsideExcludeToken {
           return nodes;
         }
       } catch (err) {
-        console.error('[ng-click-outside] Check your exclude selector syntax.', err);
+        console.error('[ng-click-outside3] Check your exclude selector syntax.', err);
       }
     }
     return [];
