@@ -52,9 +52,9 @@ export class NgClickOutsideDirective implements OnDestroy {
 
   /**
    * Enables or disables stopping event propagation on the element.
-   * Default: `true`.
+   * Default: `false`.
    */
-  stopPropagationEnabled = input(true, {transform: booleanAttribute});
+  stopPropagationEnabled = input(false, {transform: booleanAttribute});
 
   /**
    * Outside Click Event
