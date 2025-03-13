@@ -114,7 +114,7 @@ export class NgClickOutsideDirective implements OnDestroy {
 
   protected _initElementListeners() {
     this._ngZone.runOutsideAngular(() => {
-      if (this.stopPropagationEnabled) {
+      if (this.clickOutsideHostElementStopPropagationEnabled) {
         this.clickOutsideEvents().forEach(e =>
           this._el.nativeElement.addEventListener(e, this._stopPropagation)
         );
@@ -124,7 +124,7 @@ export class NgClickOutsideDirective implements OnDestroy {
 
   protected _removeElementListeners() {
     this._ngZone.runOutsideAngular(() => {
-      if (this.stopPropagationEnabled) {
+      if (this.clickOutsideHostElementStopPropagationEnabled) {
         this.clickOutsideEvents().forEach(e =>
           this._el.nativeElement.removeEventListener(e, this._stopPropagation)
         );
