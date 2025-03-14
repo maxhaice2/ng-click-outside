@@ -1,6 +1,6 @@
 {
   "name": "ng-click-outside3",
-  "version": "18.0.1-stable",
+  "version": "18.0.1-release",
   "description": "Angular directive for handling click events outside an element.",
   "license": "MIT",
   "keywords": [
