@@ -1,13 +1,20 @@
 # ng-click-outside3
 
 
-[![NPM](https://img.shields.io/npm/v/ng-click-outside3?color=orange&style=flat-square)](https://www.npmjs.com/package/ng-click-outside3)
-[![License](https://img.shields.io/github/license/maxhaice2/ng-click-outside3?color=blue&style=flat-square)](https://github.com/Kr0san89/ng-click-outside/blob/master/LICENSE)
+[![NPM](https://img.shields.io/npm/v/ng-click-outside2?color=orange&style=flat-square)](https://www.npmjs.com/package/ng-click-outside2)
+[![License](https://img.shields.io/github/license/maxhaice2/ng-click-outside3?color=blue&style=flat-square)](https://github.com/maxhaice2/ng-click-outside3/blob/master/LICENSE)
 [![Love Angular badge](https://img.shields.io/badge/angular-love-blue?logo=angular&angular=love)](https://www.github.com/angular/angular)
-[![GitHub issues](https://img.shields.io/github/issues/maxhaice2/ng-click-outside.svg "GitHub issues")](https://github.com/Kr0san89/ng-click-outside)
-[![GitHub stars](https://img.shields.io/github/stars/maxhaice2/ng-click-outside.svg "GitHub stars")](https://github.com/Kr0san89/ng-click-outside)
+[![GitHub issues](https://img.shields.io/github/issues/maxhaice2/ng-click-outside3.svg "GitHub issues")](https://github.com/maxhaice2/ng-click-outside3)
+[![GitHub stars](https://img.shields.io/github/stars/maxhaice2/ng-click-outside3.svg "GitHub stars")](https://github.com/maxhaice2/ng-click-outside3)
 
 Angular directive for handling click events outside an element.
+
+This package is a fork of ng-click-outside2 with additional features:
+`clickOutsideHostElementStopPropagationEnabled`
+`...there can be more`
+
+We plan to add new in the feature and support newer Angular version, since we are using it in production.
+
 
 Like binding to a regular `click` event in a template, you can do something like this:
 
@@ -29,11 +36,11 @@ npm install --save ng-click-outside3
 ```
 
 ## Compatibility
-| Angular  | Version | NPM                         |
-|----------|---------|-----------------------------|
-| 18,19    | 18.x.x  | `ng-click-outside3@^18.0.0` |
+| Angular  | Version    | NPM                         |
+|----------|------------|-----------------------------|
+| 18,19    | 18.x.x     | `ng-click-outside3@^18.0.0` |
 
-If you use Angular <= 18 and > 12 please use the original package. https://github.com/Kr0san89/ng-click-outside
+If you don't need our additional feature and you use Angular >= 13 you can use this fork. https://github.com/maxhaice2/ng-click-outside3
 If you use Angular <= 12 please use the original package. https://www.npmjs.com/package/ng-click-outside
 
 ### Options
