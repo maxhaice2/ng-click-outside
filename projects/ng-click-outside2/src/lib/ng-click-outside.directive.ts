@@ -54,7 +54,7 @@ export class NgClickOutsideDirective implements OnDestroy {
    * Enables or disables stopping event propagation on the element.
    * Default: `false`.
    */
-  clickOutsideHostElementStopPropagationEnabled = input<unknown, boolean>(false, {transform: booleanAttribute});
+  clickOutsideHostElementStopPropagationEnabled = input<boolean, boolean>(false, {transform: booleanAttribute});
 
   /**
    * Outside Click Event
@@ -69,17 +69,18 @@ export class NgClickOutsideDirective implements OnDestroy {
   constructor() {
     this._initOnClickBody = this._initOnClickBody.bind(this);
     this._onClickBody = this._onClickBody.bind(this);
+    this._stopPropagation = this._stopPropagation.bind(this);
     afterNextRender(() => this._init());
   }
 
   ngOnDestroy() {
     this._removeClickOutsideListener();
-    this._removeElementListeners();
+    this._removeHostElementListeners();
   }
 
   protected _init() {
     this._initOnClickBody();
-    this._initElementListeners();
+    this._initHostElementListeners();
   }
 
   protected _initOnClickBody() {
@@ -112,23 +113,23 @@ export class NgClickOutsideDirective implements OnDestroy {
     }
   }
 
-  protected _initElementListeners() {
+  protected _initHostElementListeners() {
     this._ngZone.runOutsideAngular(() => {
-      if (this.clickOutsideHostElementStopPropagationEnabled) {
-        this.clickOutsideEvents().forEach(e =>
+      this.clickOutsideEvents().forEach(e => {
+        if (this.clickOutsideHostElementStopPropagationEnabled()) {
           this._el.nativeElement.addEventListener(e, this._stopPropagation)
-        );
-      }
+        }
+      });
     });
   }
 
-  protected _removeElementListeners() {
+  protected _removeHostElementListeners() {
     this._ngZone.runOutsideAngular(() => {
-      if (this.clickOutsideHostElementStopPropagationEnabled) {
-        this.clickOutsideEvents().forEach(e =>
-          this._el.nativeElement.removeEventListener(e, this._stopPropagation)
-        );
-      }
+      this.clickOutsideEvents().forEach(e => {
+        if (this.clickOutsideHostElementStopPropagationEnabled()) {
+          this._el.nativeElement.removeEventListener(e, this._stopPropagation);
+        }
+      });
     });
   }
 
