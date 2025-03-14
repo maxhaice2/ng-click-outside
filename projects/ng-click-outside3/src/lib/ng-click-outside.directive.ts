@@ -69,6 +69,7 @@ export class NgClickOutsideDirective implements OnDestroy {
   constructor() {
     this._initOnClickBody = this._initOnClickBody.bind(this);
     this._onClickBody = this._onClickBody.bind(this);
+    this._stopPropagation = this._stopPropagation.bind(this);
     afterNextRender(() => this._init());
   }
 
